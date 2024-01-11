@@ -1,35 +1,94 @@
-
-
-let total = 0;
-    let currentOperation = null;
-    let firstOperand = null;
-
-    document.querySelectorAll('.gray').forEach(button => {
-        button.addEventListener('click', function() {
-            const display = document.querySelector('.display');
-            if (display.innerText === '0') {
-                display.innerText = this.getAttribute('data-value');
+document.addEventListener("DOMContentLoaded", function() {
+    let currentInput = "";
+    let previousInput = "";
+    let operation = null;
+    const display = document.querySelector(".display");
+    document.querySelector(".buttons").addEventListener("click", function(e) {
+        const btnValue = e.target.innerText;
+        if (!isNaN(btnValue) || btnValue === ".") {
+            currentInput += btnValue;
+            display.innerText = currentInput;
+        } else if (["+", "-", "*", "/"].includes(btnValue)) {
+            if (previousInput !== "") {
+                currentInput = operate(previousInput, currentInput, operation);
+                display.innerText = currentInput;
+                previousInput = currentInput;
+                currentInput = "";
             } else {
-                display.innerText += this.getAttribute('data-value');
+                previousInput = currentInput;
+                currentInput = "";
             }
-        });
-    });
-
-    document.querySelector('[data-operation="plus"]').addEventListener('click', function() {
-        firstOperand = parseFloat(document.querySelector('.display').innerText);
-        currentOperation = 'plus';
-        document.querySelector('.display').innerText = '0';
-    });
-
-    document.querySelector('[data-operation="equals"]').addEventListener('click', function() {
-        if (currentOperation === 'plus') {
-            const secondOperand = parseFloat(document.querySelector('.display').innerText);
-            document.querySelector('.display').innerText = firstOperand + secondOperand;
+            operation = btnValue;
+        } else if (btnValue === "=") {
+            if (previousInput) {
+                currentInput = operate(previousInput, currentInput, operation);
+                display.innerText = currentInput;
+                previousInput = "";
+                operation = null;
+            }
         }
-        // Reset
-        firstOperand = null;
-        currentOperation = null;
     });
+    function operate(a, b, op) {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        switch (op) {
+            case "+":
+                return (a + b).toString();
+            case "-":
+                return (a - b).toString();
+            case "*":
+                return (a * b).toString();
+            case "/":
+                if (b !== 0) {
+                    return (a / b).toString();
+                } else {
+                    alert("Cannot divide by zero!");
+                    clearAll();
+                    return "";
+                }
+            default:
+                return b.toString();
+        }
+    }
+    function clearAll() {
+        currentInput = "";
+        previousInput = "";
+        operation = null;
+        display.innerText = "0";
+    }
+});
+
+
+// let total = 0;
+//     let currentOperation = null;
+//     let firstOperand = null;
+
+//     document.querySelectorAll('.gray').forEach(button => {
+//         button.addEventListener('click', function() {
+//             const display = document.querySelector('.display');
+//             if (display.innerText === '0') {
+//                 display.innerText = this.getAttribute('data-value');
+//             } else {
+//                 display.innerText += this.getAttribute('data-value');
+//             }
+//         });
+//     });
+
+//     document.querySelector('[data-operation="plus"]').addEventListener('click', function() {
+//         firstOperand = parseFloat(document.querySelector('.display').innerText);
+//         currentOperation = 'plus';
+//         document.querySelector('.display').innerText = '0';
+//     });
+
+//     document.querySelector('[data-operation="equals"]').addEventListener('click', function() {
+//         if (currentOperation === 'plus') {
+//             const secondOperand = parseFloat(document.querySelector('.display').innerText);
+//             document.querySelector('.display').innerText = firstOperand + secondOperand;
+//         }
+//         // Reset
+//         firstOperand = null;
+//         currentOperation = null;
+//     });
 
 
 

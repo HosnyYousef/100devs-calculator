@@ -6,7 +6,7 @@
 	<meta name="description" content="Your description goes here">
 	<meta name="keywords" content="one, two, three">
 
-	<title>Blank Template</title>
+	<title>Calculator</title>
 
 	<!-- external CSS link -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -15,33 +15,49 @@
 
 <body>
 
-	<div class="calculator">
-		<div class="display">0</div>
-		<div class="buttons">
-
+<section class="calculator">
+	<section class="rows">
+		<div id="mainScreen">
+			<div class="display">0
+			</div>
+		</div>
 			<!-- numbers -->
+		<section class="buttons">
+
+		<div class="row1">
+			<!-- row 1 -->
 			<button class="gray">7</button>
 			<button class="gray">8</button>
 			<button class="gray">9</button>
+			<button class="orange">/</button>
+		</div>			
+		<div class="row2">
+			<!-- row 2 -->
 			<button class="gray">4</button>
 			<button class="gray">5</button>
 			<button class="gray">6</button>
+			<button class="orange">*</button>
+		</div>
+		<div class="row3">
+			<!-- row 3 -->
 			<button class="gray">1</button>
 			<button class="gray">2</button>
 			<button class="gray">3</button>
+			<button class="orange">+</button>
+		</div>
+		<div class="row4">
+			<!-- row 4 -->
 			<button class="gray">0</button>
 			<button class="gray">.</button>
-
-			<!-- multiplyers -->
-			<button class="orange">/</button>
-			<button class="orange">*</button>
-			<button class="orange">-</button>
 			<button class="orange">=</button>
-			<button class="orange">+</button>
-
+			<button class="orange">-</button>
 		</div>
-	</div>
-
+		</section>
+	</section>
+<section id="resetButton">
+		<button class="reset">Reset</button>
+	</section>
+</section>
 
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

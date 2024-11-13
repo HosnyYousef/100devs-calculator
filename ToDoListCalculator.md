@@ -5,3 +5,8 @@
 - center the whole calculator
 - JS
   - start working on buttons and how they work and display numbers
+
+
+
+
+https://ca.pinterest.com/pin/445293481912425441/

@@ -55,8 +55,7 @@ let total = 0
 //   document.querySelector('#placeToPutResult').innerText = total
 // }
 
-// orginal calculator
-// let total = 0
+//============num1=================
 
 document.querySelector('#number0').addEventListener('click', number0)
 document.querySelector('#number1').addEventListener('click', number1)
@@ -73,63 +72,138 @@ document.querySelector('#number9').addEventListener('click', number9)
 
 
 function number0() {
-  total = 0
-  document.querySelector('#placeToPutResult').innerText = total
+  num1 = 0
+  document.querySelector('#placeToPutResult').innerText = num1
 }
 
 function number1() {
-  total = 1
-  document.querySelector('#placeToPutResult').innerText = total
+  num1 = 1
+  document.querySelector('#placeToPutResult').innerText = num1
 }
 
 function number2() {
-  total = 2
-  document.querySelector('#placeToPutResult').innerText = total
+  num1 = 2
+  document.querySelector('#placeToPutResult').innerText = num1
 }
 
 function number3() {
-  total = 3
-  document.querySelector('#placeToPutResult').innerHTML = total
+  num1 = 3
+  document.querySelector('#placeToPutResult').innerHTML = num1
 }
 
 function number4() {
-  total = 4
-  document.querySelector('#placeToPutResult').innerText = total
+  num1 = 4
+  document.querySelector('#placeToPutResult').innerText = num1
 }
 
 function number5() {
-  total = 5
-  document.querySelector('#placeToPutResult').innerText = total
+  num1 = 5
+  document.querySelector('#placeToPutResult').innerText = num1
 }
 
 function number6() {
-  total = 6
-  document.querySelector('#placeToPutResult').innerHTML = total
+  num1 = 6
+  document.querySelector('#placeToPutResult').innerHTML = num1
 }
 
 
 function number7() {
-  total = 7
-  document.querySelector('#placeToPutResult').innerText = total
+  num1 = 7
+  document.querySelector('#placeToPutResult').innerText = num1
 }
 
 function number8() {
-  total = 8
-  document.querySelector('#placeToPutResult').innerText = total
+  num1 = 8
+  document.querySelector('#placeToPutResult').innerText = num1
 }
 
 function number9() {
-  total = 9
-  document.querySelector('#placeToPutResult').innerHTML = total
+  num1 = 9
+  document.querySelector('#placeToPutResult').innerHTML = num1
 }
 
 //==================================
 
+document.querySelector('#resetTo0').addEventListener('click', resetTo0)
+
+function resetTo0() {
+  total = 0
+  document.querySelector('#placeToPutResult').innerText = total
+}
+
+//============num2=================
+
+document.querySelector('#number0').addEventListener('click', number0)
+document.querySelector('#number1').addEventListener('click', number1)
+document.querySelector('#number2').addEventListener('click', number2)
+document.querySelector('#number3').addEventListener('click', number3)
+
+document.querySelector('#number4').addEventListener('click', number4)
+document.querySelector('#number5').addEventListener('click', number5)
+document.querySelector('#number6').addEventListener('click', number6)
+
+document.querySelector('#number7').addEventListener('click', number7)
+document.querySelector('#number8').addEventListener('click', number8)
+document.querySelector('#number9').addEventListener('click', number9)
+
+
+function number0() {
+  num2 = 0
+  document.querySelector('#placeToPutResult').innerText = num2
+}
+
+function number1() {
+  num2 = 1
+  document.querySelector('#placeToPutResult').innerText = num2
+}
+
+function number2() {
+  num2 = 2
+  document.querySelector('#placeToPutResult').innerText = num2
+}
+
+function number3() {
+  num1 = 3
+  document.querySelector('#placeToPutResult').innerHTML = num1
+}
+
+function number4() {
+  num2 = 4
+  document.querySelector('#placeToPutResult').innerText = num2
+}
+
+function number5() {
+  num2 = 5
+  document.querySelector('#placeToPutResult').innerText = num2
+}
+
+function number6() {
+  num2 = 6
+  document.querySelector('#placeToPutResult').innerHTML = num2
+}
+
+
+function number7() {
+  num2 = 7
+  document.querySelector('#placeToPutResult').innerText = num2
+}
+
+function number8() {
+  num2 = 8
+  document.querySelector('#placeToPutResult').innerText = num2
+}
+
+function number9() {
+  num2 = 9
+  document.querySelector('#placeToPutResult').innerHTML = num2
+}
+
+//==================================
 
 // logical operators:
 
 
-document.querySelector('#numberDivide').addEventListener('mouseenter', numberDivide)
+document.querySelector('#numberDivide').addEventListener('click', numberDivide)
 document.querySelector('#numberMultiply').addEventListener('click', numberMultiply)
 document.querySelector('#numberAdd').addEventListener('click', numberAdd)
 document.querySelector('#numberSub').addEventListener('click', numberSub)
@@ -140,7 +214,7 @@ function numberDivide() {
 }
 
 function numberMultiply() {
-  total = total + 3
+  total = num1 * num2
   document.querySelector('#placeToPutResult').innerText = total
 }
 

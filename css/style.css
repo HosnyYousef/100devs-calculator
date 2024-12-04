@@ -39,8 +39,21 @@ footer {
 
 }
 
+.display{
+     color: gray;
+}
+
+button {
+     background-color: rgb(23, 21, 21);
+     color: gray;
+}
+
+body {
+     background-color: rgb(34, 32, 32);
+}
+
 .calculator {
-    border: 5px black;
+    border: 5px red;
 }
 
 /******************************************

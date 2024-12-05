@@ -5,7 +5,8 @@ function display (val) {
   document.getElementById('result').value += val
 }
 
-//The Object.keys() static method returns an array of a given object's own enumerable string-keyed property names.
+//The keys() method returns an Iterator object with the keys of an array.
+// The keys() method does not change the original array.
 
 function myFunction(event) {
   if (event.key == '0' || event.key == '1' || event.key == '2' || event.key == '3' || event.key == '4' || event.key == '5' || event.key == '6' || event.key == '7' || event.key == '8' || event.key == '9' || event.key == '+' || event.key == '-' || event.key == '*' || event.key == '/') 

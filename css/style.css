@@ -52,7 +52,7 @@ footer {
 body {
      background-color: rgb(34, 32, 32);
 }
-#placeToPutResult {
+#result {
      background-color: rgb(23, 21, 21);
      color: gray;
      width: 92%;

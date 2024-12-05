@@ -21,11 +21,11 @@
 
 
 			<!-- CALCULATOR -->
-<table class="buttons">
+<table id="calcu" class="buttons">
 			
 	<tr id="mainScreen">
 		<!-- DEFAULT DISPLAY SCREEN -->
-		<input type= "text" min="1" step="1" inputmode="numeric" value="0" name="number" id="placeToPutResult" id="result" class="display" oninput="this.value = Math.round(this.value);"/>
+		<input type= "text" value="0" name="defaultDisplayNumber" id="result" class="display" oninput="this.value = Math.round(this.value);"/>
 	</tr>
 				<!-- row 1 -->
 <tr>
@@ -69,3 +69,4 @@
 
 </html>
 
+<!-- reference: https://www.geeksforgeeks.org/html-calculator/ -->

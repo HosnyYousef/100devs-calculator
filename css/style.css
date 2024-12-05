@@ -43,13 +43,18 @@ footer {
      color: gray;
 }
 
-button {
+.calButton {
      background-color: rgb(23, 21, 21);
      color: gray;
 }
 
 body {
      background-color: rgb(34, 32, 32);
+}
+#placeToPutResult {
+     background-color: rgb(23, 21, 21);
+     color: gray;
+     width: 90%;
 }
 
 .calculator {

@@ -17,44 +17,49 @@
 
 <section class="calculator">
 	<section class="rows">
+
 		<div id="mainScreen">
-			<div id="placeToPutResult" class="display">0</div>
+			<!-- DEFAULT DISPLAY SCREEN -->
+				<input type= "text" min="1" step="1" inputmode="numeric" value="0" name="number" id="placeToPutResult" class="display" oninput="this.value = Math.round(this.value);"/>
+
 		</div>
 			<!-- numbers -->
 		<section class="buttons">
 
-		<div class="row1">
 			<!-- row 1 -->
-			<button id="number7" class="buttons">7</button>
-			<button id="number8" class="buttons">8</button>
-			<button id="number9" class="buttons">9</button>
-			<button id="numberDivide" class="buttons" class="equationOperators">/</button>
-		</div>			
-		<div class="row2">
+<tr>
+	<td><input class="calButton" type="button" value="7"></td>
+	<td><input class="calButton" type="button" value="8"></td>
+	<td><input class="calButton" type="button" value="9"></td>
+	<td><input class="calButton" type="button" value="/"></td>
+</tr>
 			<!-- row 2 -->
-			<button id="number4" class="buttons">4</button>
-			<button id="number5" class="buttons">5</button>
-			<button id="number6" class="buttons">6</button>
-			<button id="numberMultiply" class="buttons" class="equationOperators">*</button>
-		</div>
-		<div class="row3">
+<tr>
+	<td><input class="calButton" type="button" value="4"></td>
+	<td><input class="calButton" type="button" value="5"></td>
+	<td><input class="calButton" type="button" value="6"></td>
+	<td><input class="calButton" type="button" value="*"></td>
+</tr>
 			<!-- row 3 -->
-			<button id="number1" class="buttons">1</button>
-			<button id="number2" class="buttons">2</button>
-			<button id="number3" class="buttons">3</button>
-			<button id="numberAdd" class="buttons" class="equationOperators">+</button>
-		</div>
-		<div class="row4">
+<tr>
+	<td><input class="calButton" type="button" value="1"></td>
+	<td><input class="calButton" type="button" value="2"></td>
+	<td><input class="calButton" type="button" value="3"></td>
+	<td><input class="calButton" type="button" value="+"></td>
+</tr>
 			<!-- row 4 -->
-			<button id="number0" class="buttons">0</button>
-			<button id="numberDecimal" class="buttons">.</button>
-			<button id="equals" class="buttons" >=</button>
-			<button id="numberSub" class="buttons" class="equationOperators">-</button>
+<tr>
+	<td><input class="calButton" type="button" value="0"></td>
+	<td><input class="calButton" type="button" value="."></td>
+	<td><input class="calButton" type="button" value="="></td>
+	<td><input class="calButton" type="button" value="-"></td>
+</tr>
+
 		</div>
 		</section>
 	</section>
 <section id="resetButton">
-		<button id="resetTo0" class="buttons">Reset</button>
+		<button class="calButton" id="resetTo0">Reset</button>
 	</section>
 </section>
 
@@ -63,26 +68,3 @@
 
 </html>
 
-
-
-
-<!-- <button class="num-btn clear">C</button>
-<button class="num-btn equal">=</button>
-<button class="num-btn decimal">.</button>
-<button class="num-btn plus">+</button>
-<button class="num-btn seven">7</button>
-<button class="num-btn eight">8</button>
-<button class="num-btn nine">9</button>
-<button class="num-btn minus">-</button>
-<button class="num-btn four">4</button>
-<button class="num-btn five">5</button>
-<button class="num-btn six">6</button>
-<button class="num-btn divide">/</button>
-<button class="num-btn one">1</button>
-<button class="num-btn two">2</button>
-<button class="num-btn three">3</button>
-<button class="num-btn multiply">*</button> -->
-
-<!-- <div class="result">
-	<h2>Result = </h2>
- </div> -->

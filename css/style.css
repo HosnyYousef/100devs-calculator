@@ -60,7 +60,7 @@ footer {
      color: gray;
 }
 
-.calButton {
+input[type="button"] {
      background-color: rgb(23, 21, 21);
      color: gray;
      width: 100%;

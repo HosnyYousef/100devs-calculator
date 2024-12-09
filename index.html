@@ -2,11 +2,24 @@
 <html lang="en">
 
 <head>
+
 	<meta charset="utf-8">
 	<meta name="description" content="Your description goes here">
 	<meta name="keywords" content="one, two, three">
 
-	<title>Calculator</title>
+     <title>JavaScript Calculator</title> 
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity= 
+"sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script> 
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+        integrity= 
+"sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script> 
 
 	<!-- external CSS link -->
 	<link rel="stylesheet" href="css/normalize.css">
@@ -15,86 +28,61 @@
 
 <body>
 
-	<section class="calculator">
-
 		<!-- CALCULATOR -->
 		<table id="calcu" class="buttons">
-				
-			<tr id="mainScreen">
-				<!-- DEFAULT DISPLAY SCREEN -->	
 
-<td colspan="3"><input type="text" id="result"></td> 
-<td><input type="button" value="c" onclick="clr()" /> </td> 
+			<tr id="mainScreen">
+				<!-- DEFAULT DISPLAY SCREEN -->
+
+				<td colspan="3"><input type="text" id="result"></td>
+
+				<!-- RESET BUTTON -->
+				<td><input type="button" value="c" onclick="clr()" /> </td>
 			</tr>
-	
-<!-- keydown, onkeyup -->
+
+			<!-- keydown, onkeyup -->
 
 			<!-- row 1 -->
 			<tr>
-				<td><input class="calButton" id="num7" name="number7" type="button" value="7" onclick="dis('7')"
-  keydown="myFunction(event)"></td>
-				<td><input class="calButton" id="num8" name="number8" type="button" value="8" onclick="dis('8')" keydown="myFunction(event)"
-></td>
-				<td><input class="calButton" id="num9" name="number9" type="button" value="9" onclick="dis('9')" keydown="myFunction(event)"
-></td>
-				<td><input class="calButton" id="divide" name="operatorDivide" type="button" value="/" onclick="dis('/')" keydown="myFunction(event)"
-></td>
+				<td><input type="button" value="7" onclick="dis('7')" onkeydown="myFunction(event)"></td>
+				<td><input type="button" value="8" onclick="dis('8')" onkeydown="myFunction(event)"></td>
+				<td><input type="button" value="9" onclick="dis('9')" onkeydown="myFunction(event)"></td>
+				<td><input type="button" value="/" onclick="dis('/')" onkeydown="myFunction(event)"></td>
 			</tr>
-	
+
 			<!-- row 2 -->
 			<tr>
-				<td><input class="calButton" id="num4" name="number4" type="button" value="4" onclick="dis('4')" keydown="myFunction(event)"
-></td>
-				<td><input class="calButton" id="num5" name="number5" type="button" value="5" onclick="dis('5')" keydown="myFunction(event)"
-></td>
-				<td><input class="calButton" id="num6" name="number6" type="button" value="6" onclick="dis('6')" keydown="myFunction(event)"
-></td>
-				<td><input class="calButton" id="multiply" name="operatorMultiply" type="button" value="*" onclick="dis('*')" keydown="myFunction(event)"
-></td>
+				<td><input type="button" value="4" onclick="dis('4')" onkeydown="myFunction(event)"></td>
+				<td><input type="button" value="5" onclick="dis('5')" onkeydown="myFunction(event)"></td>
+				<td><input type="button" value="6" onclick="dis('6')" onkeydown="myFunction(event)"></td>
+				<!-- MULTIPLY  -->
+				<td>
+					<input type="button" value="*" onclick="dis('*')" onkeydown="myFunction(event)">
+				</td>
 			</tr>
-	
+
 			<!-- row 3 -->
 			<tr>
-				<td><input class="calButton" id="num1" name="number1" type="button" value="1" onclick="dis('1')" keydown="myFunction(event)"
-></td>
-				<td><input class="calButton" id="num2" name="number2" type="button" value="2" onclick="dis('2')" keydown="myFunction(event)"
-></td>
-				<td><input class="calButton" id="num3" name="number3" type="button" value="3" onclick="dis('3')" keydown="myFunction(event)"
-></td>
-				<td><input class="calButton" id="add" name="operatorAdd" type="button" value="+" onclick="dis('+')" keydown="myFunction(event)"
-></td>
+				<td><input type="button" value="1" onclick="dis('1')" onkeydown="myFunction(event)"></td>
+				<td><input type="button" value="2" onclick="dis('2')" onkeydown="myFunction(event)"></td>
+				<td><input type="button" value="3" onclick="dis('3')" onkeydown="myFunction(event)"></td>
+				<td><input type="button" value="+" onclick="dis('+')" onkeydown="myFunction(event)"></td>
 			</tr>
-	
+
 			<!-- row 4 -->
 
 			<tr>
-				<!-- ZERO/0 -->	
-				<td><input class="calButton" id="num0" name="number0" type="button" value="0" onclick="dis('0')" keydown="myFunction(event)"
-></td>
-				<!-- DECIMAL -->	
-				<td><input class="calButton" id="subtract" name="operatorSubtract" type="button" value="-" onclick="dis('-')" keydown="myFunction(event)"
- keydown="myFunction(event)"></td>
-				<td><input class="calButton" id="decimal" name="decimalPoint" type="button" value="." onclick="dis('.')" keydown="myFunction(event)"
- ></td>
+				<!-- ZERO/0 -->
+				<td><input type="button" value="0" onclick="dis('0')" onkeydown="myFunction(event)"></td>
+				<!-- DECIMAL -->
+				<td><input type="button" value="." onclick="dis('.')" onkeydown="myFunction(event)"></td>
 
-			<!-- EQUAL SIGN -->
-				<td><input type="button" value="=" onclick="solve()"> </td> 
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"> </td> 
 				<!-- SUBTRACT -->
-				<td><input class="calButton" id="subtract" name="operatorSubtract" type="button" value="-" onclick="dis('-')" keydown="myFunction(event)"
- keydown="myFunction(event)"></td>
+				<td><input type="button" value="-" onclick="dis('-')" onkeydown="myFunction(event)"></td>
 			</tr>
-	
-			<!-- RESET BUTTON -->
-			<tr>
-				<td id="resetButton">
-					<button class="calButton" id="resetTo0" onclick="dis('reset')" keydown="myFunction(event)"
->Reset</button>
-				</td>
-			</tr>
-	
 		</table>
-	
-	</section>
 
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

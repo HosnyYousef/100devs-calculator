@@ -8,16 +8,19 @@ function dis(val) {
 //The keys() method returns an Iterator object with the keys of an array.
 // The keys() method does not change the original array.
 
-document.querySelector('.calButton').addEventListener('click', myFunction)
+// Function that display value 
+function dis(val) {
+  document.getElementById("result").value += val
+}
 
 function myFunction(event) {
-  if (event.key == '0' || event.key == '1' || 
-    event.key == '2' || event.key == '3' || 
-    event.key == '4' || event.key == '5' || 
-    event.key == '6' || event.key == '7' || 
-    event.key == '8' || event.key == '9' || 
-    event.key == '+' || event.key == '-' || 
-    event.key == '*' || event.key == '/') 
+  if (event.key == '0' || event.key == '1' ||
+    event.key == '2' || event.key == '3' ||
+    event.key == '4' || event.key == '5' ||
+    event.key == '6' || event.key == '7' ||
+    event.key == '8' || event.key == '9' ||
+    event.key == '+' || event.key == '-' ||
+    event.key == '*' || event.key == '/')
     document.getElementById('result').value += event.key;
 }
 
@@ -37,24 +40,24 @@ function solve() {
   let y = math.evaluate(x)
   document.getElementById("result").value = y
 }
-  
+
 // Funtion that clear the display
-function clr () {
+function clr() {
   document.getElementById("result").value = ""
-} 
+}
 
 
 
 // if we click on a number
-  // we store it in a variable
+// we store it in a variable
 // then we click on operator
-  //that will reset and bring us back to 0
+//that will reset and bring us back to 0
 // then we input second number
-  // that's stored in a value
+// that's stored in a value
 // then we hit equal
-  // that should apply num1 and num2 with the operator
+// that should apply num1 and num2 with the operator
 
 
 
 //reference:
- // https://www.geeksforgeeks.org/javascript-calculator/
+// https://www.geeksforgeeks.org/javascript-calculator/

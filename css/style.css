@@ -39,6 +39,14 @@ footer {
 
 }
 
+/* #calcu {
+     width: 100%
+} */
+
+.buttons {
+     width: 80%;
+}
+
 #displayNumScreen {
      width: 90%;
      background-color: rgb(23, 21, 21);

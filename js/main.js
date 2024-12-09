@@ -1,12 +1,14 @@
 
 
 // Function that displays value
-function display (val) {
+function dis(val) {
   document.getElementById('result').value += val
 }
 
 //The keys() method returns an Iterator object with the keys of an array.
 // The keys() method does not change the original array.
+
+document.querySelector('.calButton').addEventListener('click', myFunction)
 
 function myFunction(event) {
   if (event.key == '0' || event.key == '1' || 
@@ -20,7 +22,7 @@ function myFunction(event) {
 }
 
 var cal = document.getElementById("calcu");
-cal.onkeyup = function (event) {
+cal.addEventListener = function (event) {
   if (event.keyCode === 13) {
     console.log("Enter");
     let x = document.getElementById("result").value

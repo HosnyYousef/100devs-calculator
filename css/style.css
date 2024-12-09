@@ -40,7 +40,9 @@ footer {
 }
 
 #displayNumScreen {
-     width: 50%;
+     width: 90%;
+     background-color: rgb(23, 21, 21);
+     color: gray;
 }
 
 .display{

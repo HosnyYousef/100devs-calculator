@@ -31,13 +31,13 @@ body {
 /* LAYOUT /* CACULATOR
 /*******************************************/
 
-header {
+/* header {
 
 }
 
 footer {
 
-}
+} */
 
 /* #calcu {
      width: 100%
@@ -45,12 +45,15 @@ footer {
 
 .buttons {
      width: 80%;
+     background-color: rgb(23, 21, 21);
+     color: gray;
 }
 
 #displayNumScreen {
      width: 90%;
      background-color: rgb(23, 21, 21);
      color: gray;
+     position: relative;
 }
 
 .display{
@@ -79,6 +82,7 @@ body {
 
 .calculator {
     border: 5px red;
+    
 }
 
 /******************************************

@@ -22,12 +22,16 @@
 				
 			<tr id="mainScreen">
 				<!-- DEFAULT DISPLAY SCREEN -->	
-				<input id="displayNumScreen" type="text" value="0" name="defaultDisplayNumber" class="display" oninput="this.value = Math.round(this.value);"/>
+
+<td colspan="3"><input type="text" id="result"></td> 
+<td><input type="button" value="c" onclick="clr()" /> </td> 
 			</tr>
 	
+<!-- keydown, onkeyup -->
+
 			<!-- row 1 -->
 			<tr>
-				<td><input class="calButton" id="num7" name="number7" type="button" value="7" onclick="dis('7')" class="runFunction" ></td>
+				<td><input class="calButton" id="num7" name="number7" type="button" value="7" onclick="dis('7')" ></td>
 				<td><input class="calButton" id="num8" name="number8" type="button" value="8" onclick="dis('8')"></td>
 				<td><input class="calButton" id="num9" name="number9" type="button" value="9" onclick="dis('9')"></td>
 				<td><input class="calButton" id="divide" name="operatorDivide" type="button" value="/" onclick="dis('/')"></td>

@@ -35,11 +35,19 @@ cal.addEventListener = function (event) {
 }
 
 // Function that evaluates the digit and return result
+
+// explain this:
+// main.js
 function solve() {
-  let x = document.getElementById("result").value
-  let y = math.evaluate(x)
-  document.getElementById("result").value = y
+  try {
+    // Evaluate the expression entered in the result input
+    let result = eval(document.getElementById("result").value);
+    document.getElementById("result").value = result;
+  } catch (error) {
+    alert("Invalid Expression");  // Display error if expression is incorrect
+  }
 }
+
 
 // Funtion that clear the display
 function clr() {

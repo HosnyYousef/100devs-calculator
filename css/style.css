@@ -39,6 +39,10 @@ footer {
 
 }
 
+#displayNumScreen {
+     width: 50%;
+}
+
 .display{
      color: gray;
 }
@@ -46,7 +50,8 @@ footer {
 .calButton {
      background-color: rgb(23, 21, 21);
      color: gray;
-     width: 92%;
+     width: 100%;
+     
 }
 
 body {
@@ -56,6 +61,10 @@ body {
      background-color: rgb(23, 21, 21);
      color: gray;
      width: 92%;
+}
+
+#resetButton{
+     width: 1%;
 }
 
 .calculator {
